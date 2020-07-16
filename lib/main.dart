@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/app_screens/first_screen.dart';
 
 void main() {
   runApp(new MyApp());
@@ -8,21 +9,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: "Hello World",
         home: Scaffold(
-          appBar: AppBar(
-            title: Text("Hello world"),
-          ),
-          body: Material(
-            color: Colors.cyan[600],
-            child: Center(
-              child: Text(
-                "Hello world",
-                textDirection: TextDirection.ltr,
-                style: TextStyle(color: Colors.white, fontSize: 40.0),
-              ),
+            appBar: AppBar(
+              title: Text("Hello world"),
             ),
-          ),
-        ));
+            body: FirstScreen()));
   }
 }
